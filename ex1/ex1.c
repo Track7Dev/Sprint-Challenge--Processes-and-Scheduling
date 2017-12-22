@@ -3,7 +3,7 @@
 
 int *alloc_1d(int cols)
 {
-	 return (int *) malloc(cols);
+	 return (int *) malloc(cols * sizeof(int));
 }
 
 void main(void)
