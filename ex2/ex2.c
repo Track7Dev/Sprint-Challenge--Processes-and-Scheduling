@@ -3,9 +3,9 @@
 
 int **alloc_2d(int rows, int cols)
 {
-	int ** arr = malloc(rows);
+	int ** arr = malloc(rows * sizeof(int*));
   for(int i = 0; i < sizeof(arr); i++) {
-    arr[i] = malloc(cols);
+    arr[i] = malloc(cols * sizeof(int));
   }
   return arr;
 }

@@ -1,4 +1,4 @@
-1. I would say a & c because the processes when initialized are allocated a random chunk of memory, which in this case is 32kb without interfering with other process memory space unless explicitly told to.
+1. I would say b because the processes when initialized are allocated a random chunk of memory, which in this case is 32kb/ea without interfering with other process memory space so P1 and P2 address space would be somewhere in the memory index 0-64,000. //32,000 per process
 
 
 2.  Running (R): Currently doing work with that process;
@@ -12,8 +12,18 @@
 
     Zombie (Z): The process has finished but is still Active in the 
       process table. Usually when a process did not teritinate properly.
+3. 
+  //Test Output (speedTest.c)
+  TEST SPEED OF THIS LINE
+  printf completed
+  TEST SPEED OF THIS LINE
+  write completed
+  Printf Speed:101743400/ns
+  Write Speed:89273900/ns
+  Speed Difference:12469500
+  Printf is faster
 
-3 & 4. Printf would be a lot faster to complete (depending on size) because it is
+4. Printf would be a lot faster to complete (depending on size) because it is
     acessing the memory allocated (buffer) and only writes to the file once the
     buffer is full, where as write would have to access the HDD to find or create a
     file in the directory and write the line to the file and update(save) that current file before it is finished every single time.
